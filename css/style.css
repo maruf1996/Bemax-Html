@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+a {
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+.header-area {
+  border-top: 5px solid #4272d7;
+  min-height: 120px;
+}
+.container {
+  width: 1170px;
+  margin: auto;
+}
+
+.logo {
+  float: left;
+  margin-top: 36px;
+}
+.search-icon {
+  float: right;
+  margin-top: 50px;
+  margin-left: 25px;
+  padding-left: 25px;
+  position: relative;
+}
+.search-icon::before {
+  content: "";
+  height: 15px;
+  width: 2px;
+  position: absolute;
+  background: #cccccc none repeat scroll 0 0;
+  top: 3px;
+  left: 0;
+}
+.main-menu {
+  float: right;
+}
+.main-menu ul li {
+  display: inline-block;
+  margin-left: 40px;
+  position: relative;
+}
+.main-menu ul li a {
+  color: #666666;
+  display: block;
+  font-size: 15px;
+  padding: 50px 0;
+  text-decoration: none;
+}
+.main-menu ul li:hover > a {
+  color: #4272d7;
+}
+
+/* dropdown menu  */
+.main-menu ul li ul.submenu {
+  background: #171a21 none repeat scroll 0 0;
+  border-top: 5px solid #4272d7;
+  left: 0;
+  position: absolute;
+  top: 110%;
+  width: 260px;
+}
+.main-menu ul li:hover ul.submenu {
+  z-index: 99 !important;
+  top: 100%;
+}
+
+.main-menu ul li ul.submenu li {
+  border-bottom: 2px solid #1e2128;
+  display: block;
+  margin: 0;
+}
+.main-menu ul li ul.submenu li a {
+  color: #fff;
+  font-size: 13px;
+  padding: 15px 20px;
+}
+.main-menu ul li ul.submenu li:hover > a {
+  background-color: #4272d7;
+  padding-left: 35px;
+}
+
+/* sub dropdown menu  */
+.main-menu ul li ul.submenu li ul.submenu {
+  left: 102%;
+  opacity: 0;
+  top: 105%;
+  visibility: hidden;
+}
+.main-menu ul li:hover ul.submenu li:hover ul.submenu {
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* slider area  */
+.slider-area {
+  overflow: hidden;
+  width: 100%;
+}
+.single-slide {
+  text-align: center;
+  width: 100%;
+  padding: 175px 0;
+  background-size: cover;
+  background-position: center top;
+}
+.single-slide h4 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.single-slide h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 72px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+.single-slide a {
+  background-color: #4272d7;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 18px 40px;
+  display: inline-block;
+}
+
+div.owl-nav button {
+  background-color: red !important;
+  color: #fff !important;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+}
+div.owl-nav button.owl-next {
+  right: 50px;
+  left: auto;
+}
+
+.owl-dots {
+  width: 45px;
+  margin: 0 auto;
+}
+
+.owl-dots button.owl-dot {
+  width: 10px;
+  height: 10px;
+  background: red;
+  display: inline-block;
+  margin: 0 2px;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: -21px;
+  z-index: 1;
+  position: relative;
+  bottom: 40px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: blue;
+}
